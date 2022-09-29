@@ -102,7 +102,7 @@ export default function Weather() {
           </div>
         </div>
         <p>
-          <a href="https://github.com/tretiaki/first-challenge-weatherApp">
+          <a href="https://github.com/tretiaki/react-weather-app">
             Open-source code
           </a>
           by Iryna Tretiak👩‍💻
