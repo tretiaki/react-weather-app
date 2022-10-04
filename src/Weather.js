@@ -18,6 +18,7 @@ export default function Weather(props) {
       feelsLike: Math.round(response.data.main.feels_like),
       description: response.data.weather[0].main,
       wind: response.data.wind.speed,
+      icon: response.data.weather[0].icon,
       sunrise: "5:43", //response.data.sys.sunrise,
       sunset: "21:12", //response.data.sys.sunset,
     });

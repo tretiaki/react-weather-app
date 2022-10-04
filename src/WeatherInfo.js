@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
   return (
@@ -7,12 +8,7 @@ export default function WeatherInfo(props) {
       <div class="row">
         <div class="row maincard">
           <div class="col column">
-            <img
-              src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg"
-              alt="Weather Icon"
-              class="src icon"
-              id="icon"
-            />
+            <WeatherIcon code={props.data.icon} alt={props.data.description} />
           </div>
           <div class="col column">
             <div class="card-body">
