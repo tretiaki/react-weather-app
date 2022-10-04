@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import FormattedDate from "./FormattedDate";
+
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
-
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
     setWeather({
@@ -22,11 +23,24 @@ export default function Weather(props) {
     });
   }
 
+  function search() {
+    const apiKey = "d7f80c0687e058642edfcc5becefbc2b";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  function handleCityChange(event) {
+    event.preventDefault();
+    setCity(event.target.value);
+  }
   if (weather.ready) {
     return (
       <div class="container">
         <div class="weather-app">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div class="row">
               <div class="col-7">
                 <input
@@ -35,6 +49,7 @@ export default function Weather(props) {
                   autocomplete="off"
                   placeholder="Choose a city..."
                   class="form-control"
+                  onChange={handleCityChange}
                 />
               </div>
               <div class="col-1">
@@ -51,97 +66,12 @@ export default function Weather(props) {
               </div>
             </div>
           </form>
-          <div class="row">
-            <div class="row maincard">
-              <div class="col column">
-                <img
-                  src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg"
-                  alt="Weather Icon"
-                  class="src icon"
-                  id="icon"
-                />
-              </div>
-              <div class="col column">
-                <div class="card-body">
-                  <h1>
-                    <span class="city">{weather.city}</span>
-                    <br />
-                    <span class="currentDegree" id="currentDegree">
-                      {weather.temperature}
-                    </span>
-                    <span class="temperature">°C</span>
-                  </h1>
-                  <h2>
-                    Last updated:
-                    <span class="currentDay" id="currentTime">
-                      <FormattedDate date={weather.date} />
-                    </span>
-                  </h2>
-                </div>
-              </div>
-            </div>
-
-            <div class="col column">
-              <ul>
-                <li>
-                  Humidity: <span id="humidity">{weather.humidity}%</span>
-                </li>
-                <li>
-                  Feels like <span id="feelsLike">{weather.feelsLike}°C</span>
-                </li>
-                <li>
-                  <span id="weatherdescription">{weather.description}</span>
-                </li>
-              </ul>
-            </div>
-            <div class="col column">
-              <ul>
-                <li>
-                  Wind: <span id="wind">{weather.wind} km/h</span>
-                </li>
-                <li>
-                  Sunrise: <span id="sunrise">{weather.sunrise}</span>
-                </li>
-                <li>
-                  Sunset: <span id="sunset">{weather.sunset}</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="row" id="forecast">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title weather-forecast-day">Tuesday</h5>
-                <img
-                  src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-1.svg"
-                  alt="Partly Cloudy"
-                  class="src emojis"
-                />
-                <p class="card-text">
-                  <span class="temperature-min">13°</span>
-                  <span class="temperature-max">24°</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <p>
-            <a href="https://github.com/tretiaki/react-weather-app">
-              Open-source code
-            </a>
-            by Iryna Tretiak👩‍💻
-            <br />
-            Here you find
-            <a href="https://bas.dev/work/meteocons">Animated Weather Icons</a>I
-            used📝
-          </p>
+          <WeatherInfo data={weather} />
         </div>
       </div>
     );
   } else {
-    const apiKey = "d7f80c0687e058642edfcc5becefbc2b";
-
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
+    return <h1>Loading...</h1>;
   }
-  return <h1>Loading...</h1>;
 }
