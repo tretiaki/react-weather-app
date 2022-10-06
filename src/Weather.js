@@ -68,6 +68,21 @@ export default function Weather(props) {
             </div>
           </form>
           <WeatherInfo data={weather} />
+          <p>
+            <a
+              href="https://github.com/tretiaki/react-weather-app"
+              target="_blank"
+            >
+              Open-source code {""}
+            </a>
+            by Iryna Tretiak👩‍💻
+            <br />
+            Here you find
+            <a href="https://bas.dev/work/meteocons" target="_blank">
+              Animated Weather Icons
+            </a>{" "}
+            I used📝
+          </p>
         </div>
       </div>
     );

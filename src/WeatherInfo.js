@@ -57,32 +57,22 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
       </div>
-      <div class="row" id="forecast">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title weather-forecast-day">Tuesday</h5>
-            <img
-              src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-1.svg"
-              alt="Partly Cloudy"
-              class="src emojis"
-            />
-            <p class="card-text">
-              <span class="temperature-min">13°</span>
-              <span class="temperature-max">24°</span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <p>
-        <a href="https://github.com/tretiaki/react-weather-app">
-          Open-source code
-        </a>
-        by Iryna Tretiak👩‍💻
-        <br />
-        Here you find
-        <a href="https://bas.dev/work/meteocons">Animated Weather Icons</a>I
-        used📝
-      </p>
     </div>
   );
 }
+///<div class="row" id="forecast">
+/// <div class="card">
+/// <div class="card-body">
+///  <h5 class="card-title weather-forecast-day">Tuesday</h5>
+/// <img
+///  src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-1.svg"
+///  alt="Partly Cloudy"
+///  class="src emojis"
+/// />
+///<p class="card-text">
+///   <span class="temperature-min">13°</span>
+///   <span class="temperature-max">24°</span>
+///  </p>
+/// </div>
+/// </div>
+/// </div>
