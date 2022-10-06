@@ -1,7 +1,8 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
-
+import Sunrise from "./Sunrise";
+import Sunset from "./Sunset";
 export default function WeatherInfo(props) {
   return (
     <div class="WeatherInfo">
@@ -49,10 +50,14 @@ export default function WeatherInfo(props) {
               Wind: <span id="wind">{props.data.wind} km/h</span>
             </li>
             <li>
-              Sunrise: <span id="sunrise">{props.data.sunrise}</span>
+              <span id="sunrise">
+                <Sunrise sunrise={props.data.sunrise} />
+              </span>
             </li>
             <li>
-              Sunset: <span id="sunset">{props.data.sunset}</span>
+              <span id="sunset">
+                <Sunset sunset={props.data.sunset} />
+              </span>
             </li>
           </ul>
         </div>

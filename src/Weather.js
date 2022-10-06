@@ -19,8 +19,8 @@ export default function Weather(props) {
       description: response.data.weather[0].main,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
-      sunrise: "5:43", //response.data.sys.sunrise,
-      sunset: "21:12", //response.data.sys.sunset,
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
     });
   }
 
@@ -69,16 +69,13 @@ export default function Weather(props) {
           </form>
           <WeatherInfo data={weather} />
           <p>
-            <a
-              href="https://github.com/tretiaki/react-weather-app"
-              target="_blank"
-            >
+            <a href="https://github.com/tretiaki/react-weather-app">
               Open-source code {""}
             </a>
             by Iryna Tretiak👩‍💻
             <br />
             Here you find
-            <a href="https://bas.dev/work/meteocons" target="_blank">
+            <a href="https://bas.dev/work/meteocons">
               Animated Weather Icons
             </a>{" "}
             I used📝
