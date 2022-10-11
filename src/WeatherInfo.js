@@ -65,19 +65,3 @@ export default function WeatherInfo(props) {
     </div>
   );
 }
-///<div class="row" id="forecast">
-/// <div class="card">
-/// <div class="card-body">
-///  <h5 class="card-title weather-forecast-day">Tuesday</h5>
-/// <img
-///  src="https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-1.svg"
-///  alt="Partly Cloudy"
-///  class="src emojis"
-/// />
-///<p class="card-text">
-///   <span class="temperature-min">13°</span>
-///   <span class="temperature-max">24°</span>
-///  </p>
-/// </div>
-/// </div>
-/// </div>
