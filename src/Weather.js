@@ -72,13 +72,21 @@ export default function Weather(props) {
           <WeatherInfo data={weather} />
           <WeatherForecast coordinates={weather.coordinates} />
           <p>
-            <a href="https://github.com/tretiaki/react-weather-app">
+            <a
+              href="https://github.com/tretiaki/react-weather-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Open-source code {""}
             </a>
             by Iryna Tretiak👩‍💻
             <br />
-            Here you find
-            <a href="https://bas.dev/work/meteocons">
+            Here you find{""}
+            <a
+              href="https://bas.dev/work/meteocons"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Animated Weather Icons
             </a>{" "}
             I used📝
