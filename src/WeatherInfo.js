@@ -3,13 +3,18 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
+import "./Weather.css";
 export default function WeatherInfo(props) {
   return (
     <div class="WeatherInfo">
       <div class="row">
         <div class="row maincard">
           <div class="col column">
-            <WeatherIcon code={props.data.icon} alt={props.data.description} />
+            <WeatherIcon
+              code={props.data.icon}
+              alt={props.data.description}
+              class="icon"
+            />
           </div>
           <div class="col column">
             <div class="card-body">

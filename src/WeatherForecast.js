@@ -17,11 +17,17 @@ export default function WeatherForecast(props) {
     return (
       <div class="WeatherForecast">
         <div class="row" id="forecast">
-          <div class="card">
-            <div class="card-body">
-              <WeatherForecastDay data={forecast[0]} />
-            </div>
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div class="card">
+                  <div class="card-body" key={index}>
+                    <WeatherForecastDay data={dailyForecast} />
+                  </div>
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );

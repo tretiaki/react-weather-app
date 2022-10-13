@@ -5,7 +5,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -15,7 +15,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-night.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -25,7 +25,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/overcast-day.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -35,7 +35,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/overcast-night.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -45,7 +45,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/cloudy.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -55,7 +55,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/cloudy.svg"
         alt={props.alt}
-        class="src icon"
+        class="src"
         id="icon"
       />
     );
@@ -65,7 +65,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/overcast.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -75,7 +75,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/overcast.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -85,7 +85,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/rain.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -95,7 +95,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/rain.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -105,7 +105,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/partly-cloudy-day-rain.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -115,7 +115,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/partly-cloudy-day-rain.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -125,7 +125,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thunderstorms-day.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -135,7 +135,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thunderstorms-night.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -145,7 +145,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/snow.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -155,7 +155,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/snow.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -165,7 +165,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/mist.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
@@ -175,7 +175,7 @@ export default function WeatherIcon(props) {
       <img
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/mist.svg"
         alt={props.alt}
-        class="src icon"
+        class="src "
         id="icon"
       />
     );
