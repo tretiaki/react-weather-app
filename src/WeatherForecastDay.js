@@ -29,7 +29,9 @@ export default function WeatherForecastDay(props) {
       <h5 class="card-title weather-forecast-day">{day()}</h5>
       <WeatherIcon code={props.data.weather[0].icon} alt="" class="emoji" />
       <p class="card-text">
-        <span class="temperature-min">{minTemperature()}</span>
+        <span class="temperature-min">
+          {minTemperature()} {""}
+        </span>
         <span class="temperature-max">{maxTemperature()}</span>
       </p>
     </div>
