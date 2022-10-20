@@ -49,8 +49,6 @@ export default function Weather(props) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
-  let currentLocationButton = document.querySelector("#button");
-  currentLocationButton.addEventListener("click", getCurrentLocation);
 
   if (weather.ready) {
     return (
@@ -76,7 +74,11 @@ export default function Weather(props) {
                 />
               </div>
               <div class="col-1">
-                <button id="button" class="btn buttonLocation">
+                <button
+                  id="button"
+                  onClick={getCurrentLocation}
+                  class="btn buttonLocation"
+                >
                   Location📍
                 </button>
               </div>
