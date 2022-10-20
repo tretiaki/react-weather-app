@@ -39,6 +39,19 @@ export default function Weather(props) {
     event.preventDefault();
     setCity(event.target.value);
   }
+  function searchLocation(position) {
+    let apiKey = "d7f80c0687e058642edfcc5becefbc2b";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+  let currentLocationButton = document.querySelector("#button");
+  currentLocationButton.addEventListener("click", getCurrentLocation);
+
   if (weather.ready) {
     return (
       <div class="container">
