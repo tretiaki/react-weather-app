@@ -92,46 +92,136 @@ ul {
   width: 390px;
 }
 
+
+/* Mobile responsive design */
 @media (max-width: 576px) {
-  h1 {
-    font-size: 40px;
-  }
-  li {
-    font-size: 23px;
-    margin: 0px;
-  }
-  ul {
-    margin: 30px auto;
-    margin-left: 10px;
+
+  .weather-app {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
   }
 
-  .card {
-    width: 370px;
+  /* Search */
+  .weather-app form {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
   }
-  .maincard {
-    border: none;
-    margin: 0 auto;
+
+  .weather-app form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
   }
-  .weather-app {
-    padding: 10;
-    display: block;
-    margin: 0 auto;
+
+  .weather-app form .row > div {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding: 0;
   }
+
+  .weather-app .form-control {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+  }
+
+  .buttonSearch,
   .buttonLocation {
-    display: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
   }
-  .icon {
-    position: relative;
-    top: 10px;
-    width: 120px;
+
+  /* Current weather */
+  .weather-app .maincard {
+    width: 100%;
+    margin: 10px 0 20px;
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
   }
-  h1 {
+
+  .weather-app .maincard .column {
     text-align: center;
-    margin: 15px auto;
-    font-size: 30px;
-    font-weight: 600;
   }
-  h2 {
-    display: none;
+
+  .weather-icon {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .weather-app h1 {
+    font-size: 30px;
+    margin: 10px auto;
+  }
+
+  .weather-app h2 {
+    display: block;
+    font-size: 13px;
+    margin: 8px auto;
+  }
+
+  /* Weather details */
+  .weather-app ul {
+    margin: 12px 0;
+    padding: 0;
+  }
+
+  .weather-app li {
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 5px 0;
+  }
+
+  /* Five-day forecast */
+  .WeatherForecast #forecast {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .WeatherForecast .card {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 10px 5px;
+    border-radius: 12px;
+  }
+
+  .WeatherForecast .card-body {
+    padding: 8px 4px;
+  }
+
+  .WeatherForecast .card-title {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .WeatherForecast .card-text {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  .WeatherForecast .weather-icon {
+    width: 85px;
+    height: 85px;
+  }
+
+  /* Footer */
+  .weather-app > p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.7;
+    margin-top: 20px;
   }
 }
