@@ -27,7 +27,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "d7f80c0687e058642edfcc5becefbc2b";
+    const apiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -40,8 +40,8 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
   function searchLocation(position) {
-    let apiKey = "d7f80c0687e058642edfcc5becefbc2b";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+    const apiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
   }
@@ -95,16 +95,6 @@ export default function Weather(props) {
               Open-source code {""}
             </a>
             by Iryna Tretiak👩‍💻
-            <br />
-            Here you find{""}
-            <a
-              href="https://bas.dev/work/meteocons"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Animated Weather Icons
-            </a>{" "}
-            I used📝
           </p>
         </div>
       </div>
